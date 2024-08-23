@@ -48,14 +48,62 @@ where:
 - \(\mathcal{L}\) denotes likelihood.
 - \(\theta_s\) is the model obtained from every vector sequence \(X_s\).
 
-In this context:
+The provided equation describes the confidence measure for speaker diarization based on the Bayesian Information Criterion (BIC). Here's an explanation of the parameters in the equation:
 
-- We use 12 MFCCs, including C0, as feature vectors.
-- Every speaker model is a 32-component GMM, while the global model is a 64-component GMM.
+\begin{equation}
+C_{\text{BIC}} = \Delta \text{BIC} = \log\left(\frac{\mathcal{L}(X_1 \mid \theta_1) \mathcal{L}(X_2 \mid \theta_2)}{\mathcal{L}(X_{1,2} \mid \theta_{1,2})}\right)
+\end{equation}
 
-This measure is presented as a confidence measure for speaker segmentation, showing good performance. **We expect \(C_{\text{BIC}}\) to be higher for better diarization hypotheses**.
+\textbf{Parameters:}
 
+\begin{itemize}
+    \item \(\mathcal{L}(X_s \mid \theta_s)\):
+    \begin{itemize}
+        \item \(\mathcal{L}\): Represents the likelihood function.
+        \item \(X_s\): The sequence of acoustic feature vectors for the \(s\)-th segment, where \(s\) can be 1, 2, or 1,2.
+        \item \(\theta_s\): The parameters of the model for the \(s\)-th sequence, estimated from the data in that segment.
+    \end{itemize}
+    
+    \item \(X_1\) and \(X_2\):
+    \begin{itemize}
+        \item These represent two different sequences of acoustic feature vectors that have been segregated by the segmentation system. 
+        \item \(X_1\) corresponds to the first sequence, while \(X_2\) corresponds to the second sequence.
+    \end{itemize}
+    
+    \item \(X_{1,2}\):
+    \begin{itemize}
+        \item This represents the combined sequence of \(X_1\) and \(X_2\), i.e., both sequences considered together as if they were from the same speaker.
+    \end{itemize}
+    
+    \item \(\theta_1\) and \(\theta_2\):
+    \begin{itemize}
+        \item These are the model parameters estimated from \(X_1\) and \(X_2\) individually.
+        \item \(\theta_{1,2}\) is the model parameter estimated from the combined sequence \(X_{1,2}\).
+    \end{itemize}
+    
+    \item \(\log\):
+    \begin{itemize}
+        \item The natural logarithm function used to compute the difference in BIC values between the two hypotheses.
+    \end{itemize}
+    
+\end{itemize}
 
+\textbf{Hypotheses:}
+
+\begin{itemize}
+    \item \textbf{Different Speaker Hypothesis}: Assumes that \(X_1\) and \(X_2\) belong to different speakers. This hypothesis is represented by the product of the likelihoods \(\mathcal{L}(X_1 \mid \theta_1)\) and \(\mathcal{L}(X_2 \mid \theta_2)\).
+  
+    \item \textbf{Same Speaker Hypothesis}: Assumes that \(X_1\) and \(X_2\) belong to the same speaker. This is represented by the likelihood \(\mathcal{L}(X_{1,2} \mid \theta_{1,2})\).
+\end{itemize}
+
+\textbf{Interpretation:}
+
+\begin{itemize}
+    \item \(C_{\text{BIC}}\): This is the confidence measure that indicates the strength of the evidence favoring the different speaker hypothesis over the same speaker hypothesis.
+    \item A higher \(C_{\text{BIC}}\) value suggests that the sequences \(X_1\) and \(X_2\) are more likely to belong to different speakers, leading to a better speaker diarization hypothesis.
+\end{itemize}
+
+The method ensures that both hypotheses (same speaker and different speaker) are compared with the same model complexity, making the comparison fair and avoiding the need for tuning BIC penalty parameters.
 
 
 **Bayesian Information Criterion (BIC)**
