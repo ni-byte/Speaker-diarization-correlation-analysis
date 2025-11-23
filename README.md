@@ -6,11 +6,11 @@
 3. [Data](#data)
 4. [Conclusions](#conclusions)
 5. [Experiment Process](#experiment-process)
-7. [Terminologies](#terminologies)
-8. [Inputs](#inputs)
-9. [Parameters For Analysis](#parameters-for-analysis)
-10.[Additional Reference](#additional-reference)
-12. [Acknowledgment](#acknowledgment)
+6. [Terminologies](#terminologies)
+7. [Inputs](#inputs)
+8. [Parameters For Analysis](#parameters-for-analysis)
+9. [Additional Reference](#additional-reference)
+10. [Acknowledgment](#acknowledgment)
 
 
 # Project Goal
