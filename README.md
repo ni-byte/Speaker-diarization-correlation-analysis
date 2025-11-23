@@ -96,7 +96,7 @@ There is no apparrent correlation between the target speech features (MFCCs，x-
 
 ## Notebooks with actual data and outcome
 
-- [Diarization](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/diarization.ipynb?ref_type=heads)
+- [Diarization]([https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/diarization.ipynb?ref_type=heads](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/diarization.ipynb)
 - [Feature extraction and sample selection](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/sample_selection_and_features_extraction.ipynb?ref_type=heads)
 - [Correlation analysis based on Delta BIC](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/correlation_with_delta_BIC.ipynb?ref_type=heads)
 - [Correlation analysis based on Cosine Similarities](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/correlation_with_cos_sim.ipynb?ref_type=heads)
