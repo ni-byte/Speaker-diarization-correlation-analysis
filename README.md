@@ -97,10 +97,10 @@ There is no apparrent correlation between the target speech features (MFCCs，x-
 ## Notebooks with actual data and outcome
 
 - [Diarization](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/diarization.ipynb)
-- [Feature extraction and sample selection](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/sample_selection_and_features_extraction.ipynb?ref_type=heads)
-- [Correlation analysis based on Delta BIC](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/correlation_with_delta_BIC.ipynb?ref_type=heads)
-- [Correlation analysis based on Cosine Similarities](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/correlation_with_cos_sim.ipynb?ref_type=heads)
-- [Correlation analysis based on Silhouette Score](https://gitlab.uzh.ch/mi.zhou/speaker-diarization/-/blob/main/pyannote/Final%20versions/correlation_with_sil_score.ipynb?ref_type=heads)
+- [Feature extraction and sample selection](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/sample_selection_and_features_extraction.ipynb)
+- [Correlation analysis based on Delta BIC](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/correlation_with_delta_BIC.ipynb)
+- [Correlation analysis based on Cosine Similarities](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/correlation_with_cos_sim.ipynb)
+- [Correlation analysis based on Silhouette Score](https://github.com/ni-byte/Speaker-diarization-correlation-analysis/blob/main/Pyannote/Final%20version/correlation_with_sil_score.ipynb)
 
 
 ## Clean versions that can be used as templates
