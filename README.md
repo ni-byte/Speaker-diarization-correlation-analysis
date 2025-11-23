@@ -1,5 +1,42 @@
-**Goal** 
-To explore the correlation between speech features (e.g. MFCC)  and the corresponding confidence measure of the same audio sample.
+**Table of contents**
+
+1. [Project Goal](#project-goal)
+2. [Methodology](#methodology) 
+3. [Data](#data)
+4. [Experiment Process](#experiment-process)
+5. [Conclusions](#conclusions)
+6. [Terminologies](#terminologies)
+7. [Inputs](#inputs)
+8. [Parameters For Analysis](#parameters-for-analysis)
+9. [Additional Reference](#additional-reference)
+10. [Acknowledgment](#acknowledgment)
+
+# Project Goal
+
+Explore whether certain speech features, including MFCCs, x-vectors and embeddings, are correlated with confidence measures which evaluate the quality of the speaker diarization outcome.
+
+## Approaches to achieve the goal
+
+### Approach 1
+
+Explore the correlation between speech features (MFCC and x-vector) and the ∆BIC (delta Bayesian Information Criterion) proposed by [(Serafini et al. (2023)](https://arxiv.org/abs/2305.18074) and [Vaquero et al.(2013)](https://ieeexplore.ieee.org/document/6392899), which evaluates the probability that two feature vectors belong to different speakers or the same speaker.
+
+#### Additional assumption
+
+Since a higher ∆BIC value means better diarization result, if the speech features are correlated with ∆BIC, it is possible to identify the diarization performance by looking at the patterns in the speech features.
+
+### Approach 2
+
+Explore the correlation between speech features (MFCC, x-vector and embeddings) and the Cosine Similarity Score (also called mean cosine similarities in this analysis) and Silhouette Score proposed by [Chowdhury et al.(2024)](https://arxiv.org/abs/2406.17124), which evaluates the accuracy of the diarization system in identifying a segment within a speaker model.
+
+Note:
+Since the mean cosine similarities can be calculated based on different units (per segment or per speaker), it is only called cosine similarity score when it is calculated bassed on speaker level, this analysis use "mean cosine similarities" for the calculation based on segment level, and call it "cosine similarity score" for the calculation based on speaker level.
+
+#### Additional assumption
+
+Since for both the Cosine Similarity Score and Silhouette Score, the values range from -1 to 1, 1 means higher accuracy that the current segments is classified to the correct speaker model, -1 means lower accuracy.
+
+If the speech features are correlated with Cosine Similarity Score or Silhouette Score, there is a feasibility to identify the perforamnce of the diarization system by simply looking at the mfcc or x-vectors or embedding patterns of the sample audio.
 
 Methodology 
 Tools
