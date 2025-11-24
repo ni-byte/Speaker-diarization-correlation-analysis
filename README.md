@@ -43,7 +43,7 @@ If the speech features are correlated with Cosine Similarity Score or Silhouette
 
 # Methodology
 
-The experiements are conducted using the latest popular speaker diarization tool [pyannote](https://github.com/pyannote/pyannote-audio) to extract the speech features necessary for correlation analysis. 
+The experiements are conducted using the speaker diarization tool [pyannote](https://github.com/pyannote/pyannote-audio) to extract the speech features necessary for correlation analysis. 
 
 
 # Data
